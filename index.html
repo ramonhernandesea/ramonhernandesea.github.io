@@ -6,13 +6,16 @@
   <title>Ramon Hernandez | Portfolio</title>
   <style>
     :root {
-      --bg: #f7f8fa;
+      --bg: #fffaf3;
       --card: #ffffff;
-      --text: #1f2937;
-      --muted: #5f6b7a;
-      --accent: #1f4e79;
-      --accent-dark: #153955;
-      --border: #e5e7eb;
+      --text: #102033;
+      --muted: #526174;
+      --accent: #0f766e;
+      --accent-dark: #0b4f4a;
+      --highlight: #f59e0b;
+      --highlight-soft: #fff3d8;
+      --teal-soft: #e6fffb;
+      --border: #eadfce;
     }
 
     * {
@@ -43,11 +46,12 @@
     }
 
     header {
-      background: var(--card);
+      background: rgba(255, 255, 255, 0.94);
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
       z-index: 10;
+      backdrop-filter: blur(10px);
     }
 
     nav {
@@ -70,7 +74,10 @@
 
     .hero {
       padding: 5rem 0 4rem;
-      background: linear-gradient(135deg, #ffffff 0%, #edf3f8 100%);
+      background:
+        radial-gradient(circle at 10% 20%, rgba(245, 158, 11, 0.16) 0%, rgba(245, 158, 11, 0) 26%),
+        radial-gradient(circle at 85% 15%, rgba(15, 118, 110, 0.18) 0%, rgba(15, 118, 110, 0) 30%),
+        linear-gradient(135deg, #fffaf3 0%, #e6fffb 100%);
     }
 
     .hero h1 {
@@ -82,7 +89,7 @@
 
     .hero .subtitle {
       font-size: 1.25rem;
-      color: var(--accent);
+      color: var(--accent-dark);
       font-weight: 700;
       margin-bottom: 1rem;
     }
@@ -106,6 +113,13 @@
       border-radius: 8px;
       font-weight: 700;
       border: 1px solid var(--accent);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      text-decoration: none;
+      box-shadow: 0 8px 18px rgba(16, 32, 51, 0.12);
     }
 
     .button.primary {
@@ -115,11 +129,10 @@
 
     .button.primary:hover {
       background: var(--accent-dark);
-      text-decoration: none;
     }
 
     .button.secondary {
-      color: var(--accent);
+      color: var(--accent-dark);
       background: white;
     }
 
@@ -133,6 +146,16 @@
       color: var(--text);
     }
 
+    section h2::after {
+      content: "";
+      display: block;
+      width: 64px;
+      height: 4px;
+      background: var(--highlight);
+      border-radius: 999px;
+      margin-top: 0.45rem;
+    }
+
     .section-intro {
       max-width: 800px;
       color: var(--muted);
@@ -144,7 +167,11 @@
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 1.5rem;
-      box-shadow: 0 8px 20px rgba(31, 41, 55, 0.05);
+      box-shadow: 0 10px 24px rgba(16, 32, 51, 0.07);
+    }
+
+    .project-card {
+      border-top: 5px solid var(--accent);
     }
 
     .project-card h3 {
@@ -166,9 +193,9 @@
     }
 
     .tag {
-      background: #eef4f8;
-      color: var(--accent-dark);
-      border: 1px solid #d9e6ef;
+      background: var(--highlight-soft);
+      color: #7c4a03;
+      border: 1px solid #f4d38d;
       border-radius: 999px;
       padding: 0.35rem 0.7rem;
       font-size: 0.9rem;
@@ -193,8 +220,8 @@
     }
 
     footer {
-      background: #111827;
-      color: #d1d5db;
+      background: #102033;
+      color: #d9e6ef;
       padding: 2rem 0;
       margin-top: 2rem;
     }
@@ -224,7 +251,7 @@
   <header>
     <div class="container">
       <nav>
-        <div class="logo">Ramon Hernandez, PMP</div>
+        <div class="logo">Ramon Hernandez, PMP, MPA</div>
         <div class="nav-links">
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
@@ -254,7 +281,7 @@
       <div class="container">
         <h2>About</h2>
         <p class="section-intro">
-          I am a project management and operations professional with a Master of Science in Information Management from the University of Washington and a PMP certification. My work is centered on improving processes, aligning teams, and using data to better understand problems and support informed decisions.
+          I am a project management and operations professional with a Master of Science in Information Management from the University of Washington, a PMP certification, and an MPA. My work is centered on improving processes, aligning teams, and using data to better understand problems and support informed decisions.
         </p>
         <p class="section-intro">
           Through my recent retail analytics project, I applied SQL, Snowflake, and Tableau to transform retail sales data into meaningful insights. The project reflects my interest in using data as a tool for solving business problems, improving workflows, and helping organizations make clearer decisions.
