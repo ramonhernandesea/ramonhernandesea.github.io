@@ -1,1 +1,333 @@
-<h1>Ramon Hernandez - Portfolio</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramon Hernandez | Portfolio</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #5f6b7a;
+      --accent: #1f4e79;
+      --accent-dark: #153955;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      padding: 5rem 0 4rem;
+      background: linear-gradient(135deg, #ffffff 0%, #edf3f8 100%);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .hero .subtitle {
+      font-size: 1.25rem;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 760px;
+      font-size: 1.08rem;
+      color: var(--muted);
+      margin-bottom: 1.75rem;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      font-weight: 700;
+      border: 1px solid var(--accent);
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .button.primary:hover {
+      background: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      color: var(--accent);
+      background: white;
+    }
+
+    section {
+      padding: 3.5rem 0;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .section-intro {
+      max-width: 800px;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 20px rgba(31, 41, 55, 0.05);
+    }
+
+    .project-card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .project-card p {
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin: 1rem 0 1.25rem;
+    }
+
+    .tag {
+      background: #eef4f8;
+      color: var(--accent-dark);
+      border: 1px solid #d9e6ef;
+      border-radius: 999px;
+      padding: 0.35rem 0.7rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.45rem;
+      color: var(--accent-dark);
+    }
+
+    .skill-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      padding: 2rem 0;
+      margin-top: 2rem;
+    }
+
+    footer a {
+      color: #ffffff;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        align-items: flex-start;
+        gap: 0.75rem;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        padding-top: 3.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Ramon Hernandez, PMP</div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Ramon Hernandez</h1>
+        <div class="subtitle">Project Management | Process Improvement | Data-Informed Decision-Making</div>
+        <p>
+          I help organizations improve processes, organize work, and use data to support better decisions. My background brings together project management, operations, and analytics with a focus on practical solutions that help teams move work forward.
+        </p>
+        <div class="button-row">
+          <a class="button primary" href="#projects">View Featured Project</a>
+          <a class="button secondary" href="https://github.com/ramonhernandesea" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>About</h2>
+        <p class="section-intro">
+          I am a project management and operations professional with a Master of Science in Information Management from the University of Washington and a PMP certification. My work is centered on improving processes, aligning teams, and using data to better understand problems and support informed decisions.
+        </p>
+        <p class="section-intro">
+          Through my recent retail analytics project, I applied SQL, Snowflake, and Tableau to transform retail sales data into meaningful insights. The project reflects my interest in using data as a tool for solving business problems, improving workflows, and helping organizations make clearer decisions.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2>Featured Project</h2>
+        <div class="card project-card">
+          <h3>Enterprise Retail Analytics Pipeline</h3>
+          <p>
+            This project demonstrates how retail sales data can be transformed into useful business insights through a structured analytics workflow. I designed the project to simulate how an organization might use sales, customer, product, and store data to better understand performance and support decision-making.
+          </p>
+          <p>
+            The project includes data preparation, SQL analysis, Snowflake data modeling, and Tableau dashboard development. The goal was not just to build a dashboard, but to show how accurate, reliable data can help answer business questions and drive better business outcomes.
+          </p>
+          <div class="tag-list">
+            <span class="tag">SQL</span>
+            <span class="tag">Snowflake</span>
+            <span class="tag">Tableau</span>
+            <span class="tag">Data Modeling</span>
+            <span class="tag">Business Intelligence</span>
+            <span class="tag">Process Improvement</span>
+          </div>
+          <a class="button primary" href="https://github.com/ramonhernandesea/enterprise-retail-analytics-pipeline" target="_blank" rel="noopener noreferrer">View Project on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="grid">
+          <div class="card skill-card">
+            <h3>Project Management</h3>
+            <p>Project planning, coordination, stakeholder communication, risk management, and execution.</p>
+          </div>
+          <div class="card skill-card">
+            <h3>Process Improvement</h3>
+            <p>Workflow analysis, operational problem solving, documentation, and continuous improvement.</p>
+          </div>
+          <div class="card skill-card">
+            <h3>Data Analysis</h3>
+            <p>SQL analysis, data preparation, business questions, and insight development.</p>
+          </div>
+          <div class="card skill-card">
+            <h3>Business Intelligence</h3>
+            <p>Snowflake, Tableau, dashboard development, and data-informed decision support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="section-intro">
+          You can view my work on GitHub and connect with me through my professional profiles.
+        </p>
+        <div class="button-row">
+          <a class="button primary" href="https://github.com/ramonhernandesea" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="button secondary" href="https://github.com/ramonhernandesea/enterprise-retail-analytics-pipeline" target="_blank" rel="noopener noreferrer">Featured Project</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Ramon Hernandez. Portfolio built with GitHub Pages.</p>
+    </div>
+  </footer>
+</body>
+</html>
