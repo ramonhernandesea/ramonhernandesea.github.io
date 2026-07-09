@@ -6,16 +6,15 @@
   <title>Ramon Hernandez | Portfolio</title>
   <style>
     :root {
-      --bg: #fffaf3;
+      --bg: #E8E2DB;
       --card: #ffffff;
-      --text: #102033;
-      --muted: #526174;
-      --accent: #0f766e;
-      --accent-dark: #0b4f4a;
-      --highlight: #f59e0b;
-      --highlight-soft: #fff3d8;
-      --teal-soft: #e6fffb;
-      --border: #eadfce;
+      --text: #1B3340;
+      --muted: #6B605A;
+      --accent: #4E6E80;
+      --accent-dark: #1B3340;
+      --highlight: #98A7AE;
+      --highlight-soft: #E8E2DB;
+      --border: #cfc7bf;
     }
 
     * {
@@ -46,7 +45,7 @@
     }
 
     header {
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(232, 226, 219, 0.94);
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
@@ -75,9 +74,9 @@
     .hero {
       padding: 5rem 0 4rem;
       background:
-        radial-gradient(circle at 10% 20%, rgba(245, 158, 11, 0.16) 0%, rgba(245, 158, 11, 0) 26%),
-        radial-gradient(circle at 85% 15%, rgba(15, 118, 110, 0.18) 0%, rgba(15, 118, 110, 0) 30%),
-        linear-gradient(135deg, #fffaf3 0%, #e6fffb 100%);
+        radial-gradient(circle at 10% 20%, rgba(78, 110, 128, 0.22) 0%, rgba(78, 110, 128, 0) 28%),
+        radial-gradient(circle at 85% 15%, rgba(27, 51, 64, 0.18) 0%, rgba(27, 51, 64, 0) 30%),
+        linear-gradient(135deg, #E8E2DB 0%, #98A7AE 100%);
     }
 
     .hero h1 {
@@ -119,21 +118,23 @@
     .button:hover {
       transform: translateY(-1px);
       text-decoration: none;
-      box-shadow: 0 8px 18px rgba(16, 32, 51, 0.12);
+      box-shadow: 0 8px 18px rgba(27, 51, 64, 0.16);
     }
 
     .button.primary {
-      background: var(--accent);
+      background: var(--accent-dark);
       color: white;
+      border-color: var(--accent-dark);
     }
 
     .button.primary:hover {
-      background: var(--accent-dark);
+      background: var(--accent);
+      border-color: var(--accent);
     }
 
     .button.secondary {
       color: var(--accent-dark);
-      background: white;
+      background: rgba(255, 255, 255, 0.72);
     }
 
     section {
@@ -151,7 +152,7 @@
       display: block;
       width: 64px;
       height: 4px;
-      background: var(--highlight);
+      background: var(--accent);
       border-radius: 999px;
       margin-top: 0.45rem;
     }
@@ -167,7 +168,7 @@
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 1.5rem;
-      box-shadow: 0 10px 24px rgba(16, 32, 51, 0.07);
+      box-shadow: 0 10px 24px rgba(27, 51, 64, 0.09);
     }
 
     .project-card {
@@ -194,8 +195,8 @@
 
     .tag {
       background: var(--highlight-soft);
-      color: #7c4a03;
-      border: 1px solid #f4d38d;
+      color: var(--accent-dark);
+      border: 1px solid var(--highlight);
       border-radius: 999px;
       padding: 0.35rem 0.7rem;
       font-size: 0.9rem;
@@ -220,8 +221,8 @@
     }
 
     footer {
-      background: #102033;
-      color: #d9e6ef;
+      background: var(--accent-dark);
+      color: #E8E2DB;
       padding: 2rem 0;
       margin-top: 2rem;
     }
